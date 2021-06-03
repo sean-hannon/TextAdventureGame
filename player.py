@@ -57,23 +57,23 @@ class Player:
         best_weapon = self.most_powerful_weapon()
         room = world.tile_at(self.x, self.y)
         enemy = room.enemy
-        print("You use {} against {}!".format(best_weapon.name, enemy.name))
+        print("\nYou use {} against {}!".format(best_weapon.name, enemy.name))
         enemy.hp -= best_weapon.damage
         if not enemy.is_alive():
-            print("You killed {}!".format(enemy.name))
+            print("\nYou killed {}!".format(enemy.name))
         else:
-            print("{} HP is {}".format(enemy.name, enemy.hp))
+            print("\n{} HP is {}".format(enemy.name, enemy.hp))
 
     def heal(self):
         consumables = [item for item in self.inventory
                        if isinstance(item, items.Consumable)]
         if not consumables:
-            print("You don't have any items to heal you!")
+            print("\nYou don't have any items to heal you!")
             return
 
+        print("\nChoose an item to use to heal: ")
         for i, item in enumerate(consumables, 1):
-            print("Choose an item to use to heal: ")
-            print("{}. {}".format(i, item))
+            print("\n{}. {}".format(i, item))
 
         valid = False
         while not valid:

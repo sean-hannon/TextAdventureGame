@@ -19,7 +19,7 @@ def play():
 
 def get_available_actions(room, player):
     actions = OrderedDict()
-    print("Choose an action: ")
+    print("\nChoose an action: \n")
     if player.inventory:
         action_adder(actions, 'i', player.print_inventory, "Print inventory")
     if isinstance(room, world.TraderTile):

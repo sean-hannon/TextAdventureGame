@@ -72,20 +72,20 @@ class EnemyTile(MapTile):
         r = random.random()
         if r < 0.50:
             self.enemy = enemies.Goblin()
-            self.alive_text = "A goblin jumps out from the darkness!"
-            self.dead_text = "A motionless dead goblin is on the floor"
+            self.alive_text = "\nA goblin jumps out from the darkness!"
+            self.dead_text = "\nA motionless dead goblin is on the floor"
         elif r < 0.80:
             self.enemy = enemies.MischiefOfRats()
-            self.alive_text = "You hear squeaking noise around you, suddenly you are surrounded by rats"
-            self.dead_text = "Dozens of dead rats are scattered on the ground"
+            self.alive_text = "\nYou hear squeaking noise around you, suddenly you are surrounded by rats"
+            self.dead_text = "\nDozens of dead rats are scattered on the ground"
         elif r < 0.95:
             self.enemy = enemies.GiantSpider()
-            self.alive_text = "A giant spider jumps down from its web in front of you"
-            self.dead_text = "The corpse of a dead spider rots on the ground"
+            self.alive_text = "\nA giant spider jumps down from its web in front of you"
+            self.dead_text = "\nThe corpse of a dead spider rots on the ground"
         else:
             self.enemy = enemies.Orc()
-            self.alive_text = "An orc is blocking your path!"
-            self.dead_text = "A dead orc reminds you of your triumph"
+            self.alive_text = "\nAn orc is blocking your path!"
+            self.dead_text = "\nA dead orc reminds you of your triumph"
 
         super().__init__(x, y)
 
